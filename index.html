@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Display a map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#mappanel { position: absolute; top: 0; bottom: 0; width: 75%; }
+</style>
+</head>
+<body>
+<div id="mappanel"></div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiY3J1emluNzN2dyIsImEiOiI3RDdhUi1NIn0.jaEqREZw7QQMRafKPNBdmA';
+  var coordinates = [-118.188140, 33.778577] //Coordinates for the City of Long Beach
+  var mapname = 'mappanel'  
+
+  var map = new mapboxgl.Map({
+        container: mapname, // container id
+        style: 'mapbox://styles/cruzin73vw/ck9nlnum50ki81iqopljm028z', // stylesheet location
+        center: coordinates, // starting position [lng, lat]
+        zoom: 12 // starting zoom
+    });
+</script>
+
+</body>
+</html>
